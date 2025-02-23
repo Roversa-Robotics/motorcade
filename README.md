@@ -28,7 +28,7 @@ main(){
         uBit.sleep(1000);
         drive(50,50);        //drive forward at 50% speed
         uBit.sleep(1000);
-        reverse(50,50);      drive backwards at 50% speed
+        reverse(50,50);      //drive backwards at 50% speed
         uBit.sleep(1000);
     }
 }
