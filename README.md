@@ -5,7 +5,7 @@ add:
 to **main.cpp** to use the basic driving functions of Roversa.
 
 For example in **main.cpp**:
-```
+```cpp
 #include "MicroBit.h"
 #include "servoRoversa.h"
 
