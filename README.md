@@ -50,4 +50,4 @@ The stop function writes the GPIO low to ensure that no signal is being sent to 
 
 `neutral();`
 
-The neutral function sends a 0 analog signal or 1500 μs pulse to each motor
+The neutral function sends a 0 analog signal or 1500μs pulse to each motor
