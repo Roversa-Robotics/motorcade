@@ -38,7 +38,7 @@ main(){
 
 `drive(int,int);`
 
-The drive function ranges from -100 to 100 percent to control direction and speed in each motor. The first parameter is the left motor speed/direction and the second is th right motor speed/direction. This allows you to move a motor forward and backward ranging all speeds. 100% moves each motor in the forward direction or left motor CCW and right motor CW. -100% moves each motor in the backwards direction or left motor CW and right motor CCW. 0 is neutral position.
+The drive function ranges from -100 to 100 percent to control direction and speed in each motor. The first parameter is the left motor speed/direction and the second is the right motor speed/direction. This allows you to move a motor forward and backward ranging all speeds. 100% moves each motor at full speed in the forward direction or left motor CCW and right motor CW. -100% moves each motor at full speed in the backwards direction or left motor CW and right motor CCW. 0 is neutral position.
 
 `forward(int,int);`
 `reverse(int,int);`
