@@ -1,4 +1,5 @@
 #include "MicroBit.h"
+#include "servoRoversa.h"
 
 extern MicroBit uBit;
 
@@ -8,11 +9,8 @@ Range: 700μs - 2300μs, neutral at 1500μs, and a frequency of 50Hz
 Left motor on microbit pin 1
 Right motor on microbit pin 2
 */
-const int stop_us = 1500;
-const int min_us = 700;
-const int max_us = 2300;
-const int frequency = 50;
-const int period = 1000000 / frequency;
+
+const int period = 1000000 / FREQUENCY;
 
 const int max_input = 100;                                                       //can be changed, default percentage: 100 is 100% CCW
 const int min_input = -100;                                                      //can be changed, default percentages: -100 is 100% CW
@@ -38,8 +36,8 @@ void drive(int speedL, int speedR) {                                            
     int angleSpeedR = mapRange(speedR,min_input,max_input,180,0);                 //user decides direction of motor R motor is CW for forward
     uBit.io.P1.setServoPulseUs(period);                                           //set left motor period for analog
     uBit.io.P2.setServoPulseUs(period);                                           //set right motor period for analog
-    uBit.io.P1.setServoValue(angleSpeedL, max_us, stop_us);                       //left motor
-    uBit.io.P2.setServoValue(angleSpeedR, max_us, stop_us);                       //right motor
+    uBit.io.P1.setServoValue(angleSpeedL, MAX_US, STOP_US);                       //left motor
+    uBit.io.P2.setServoValue(angleSpeedR, MAX_US, STOP_US);                       //right motor
 }
 
 /*
@@ -52,8 +50,8 @@ void forward(int speedL, int speedR) {                                          
     int angleSpeedR = mapRange(speedR,(max_input+min_input),max_input,90,0);      //right motor CW
     uBit.io.P1.setServoPulseUs(period);                                           //set left motor period for analog
     uBit.io.P2.setServoPulseUs(period);                                           //set right motor period for analog
-    uBit.io.P1.setServoValue(angleSpeedL, max_us, stop_us);
-    uBit.io.P2.setServoValue(angleSpeedR, max_us, stop_us);
+    uBit.io.P1.setServoValue(angleSpeedL, MAX_US, STOP_US);
+    uBit.io.P2.setServoValue(angleSpeedR, MAX_US, STOP_US);
 }
 
 void reverse(int speedL, int speedR) {
@@ -61,8 +59,8 @@ void reverse(int speedL, int speedR) {
     int angleSpeedR = mapRange(speedR,(max_input+min_input),max_input,90,180);    //right motor CCW
     uBit.io.P1.setServoPulseUs(period);                                           //set left motor period for analog
     uBit.io.P2.setServoPulseUs(period);                                           //set right motor period for analog
-    uBit.io.P1.setServoValue(angleSpeedL, max_us, stop_us);       
-    uBit.io.P2.setServoValue(angleSpeedR, max_us, stop_us);     
+    uBit.io.P1.setServoValue(angleSpeedL, MAX_US, STOP_US);       
+    uBit.io.P2.setServoValue(angleSpeedR, MAX_US, STOP_US);     
 }
 
 void left(int speedL, int speedR) {
@@ -70,8 +68,8 @@ void left(int speedL, int speedR) {
     int angleSpeedR = mapRange(speedR,(max_input+min_input),max_input,90,0);      //right motor CW
     uBit.io.P1.setServoPulseUs(period);                                           //set left motor period for analog
     uBit.io.P2.setServoPulseUs(period);                                           //set right motor period for analog
-    uBit.io.P1.setServoValue(angleSpeedL, max_us, stop_us);       
-    uBit.io.P2.setServoValue(angleSpeedR, max_us, stop_us); 
+    uBit.io.P1.setServoValue(angleSpeedL, MAX_US, STOP_US);       
+    uBit.io.P2.setServoValue(angleSpeedR, MAX_US, STOP_US); 
 }
 
 void right(int speedL, int speedR){
@@ -79,8 +77,8 @@ void right(int speedL, int speedR){
     int angleSpeedR = mapRange(speedR,(max_input+min_input),max_input,90,180);    //right motor CCW
     uBit.io.P1.setServoPulseUs(period);                                           //set left motor period for analog
     uBit.io.P2.setServoPulseUs(period);                                           //set right motor period for analog
-    uBit.io.P1.setServoValue(angleSpeedL, max_us, stop_us);       
-    uBit.io.P2.setServoValue(angleSpeedR, max_us, stop_us); 
+    uBit.io.P1.setServoValue(angleSpeedL, MAX_US, STOP_US);       
+    uBit.io.P2.setServoValue(angleSpeedR, MAX_US, STOP_US); 
 }
 
 //set GPIO low to cut motors off - reset analog setServoPulseUs
@@ -98,6 +96,6 @@ should be stopped
 void neutral() {
     uBit.io.P1.setServoPulseUs(period);                                           //set left motor period for analog
     uBit.io.P2.setServoPulseUs(period);                                           //set right motor period for analog
-    uBit.io.P1.setServoValue(0, max_us, stop_us);       
-    uBit.io.P2.setServoValue(0, max_us, stop_us); 
+    uBit.io.P1.setServoValue(0, MAX_US, STOP_US);       
+    uBit.io.P2.setServoValue(0, MAX_US, STOP_US); 
 }
