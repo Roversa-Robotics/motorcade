@@ -1,6 +1,8 @@
 Simple library for basic controls of Roversa using [codal-microbit-v2](https://github.com/lancaster-university/microbit-v2-samples) servo examples to control the Feetech FS90R continuous servo motors. This allows input values to be mapped onto the existing servo functions in the library. This can easily be modified to take any input and map its ranges onto the servo functions.
 
-add:
+This assumes that your servo has a range of 700μs - 2300μs, neutral at 1500μs. Tune and test your motor before running all functions. All functions with parameters assume `function(left motor speed, right motor speed)` and will be in percentages up to 100.
+
+To use the library, add:
 `#include "servoRoversa.h"`
 to **main.cpp** to use the basic driving functions of Roversa.
 
