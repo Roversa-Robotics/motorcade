@@ -33,17 +33,18 @@ main(){
     }
 }
 ```
-The drive function ranges from -100 to 100 percent to control direction and speed in each motor. The first parameter is the left motor speed/direction and the second is th right motor speed/direction. This allows you to move a motor forward and backward ranging all speeds. 100% moves each motor in the forward direction or left motor CCW and right motor CW. -100% moves each motor in the backwards direction or left motor CW and right motor CCW. 0 is neutral position.
 `drive(int,int);`
 
-The forward, reverse, left, and right all range from 0-100 percent in the left and right motors. Directions are preset per function so you just need to give each motor a speed.
+The drive function ranges from -100 to 100 percent to control direction and speed in each motor. The first parameter is the left motor speed/direction and the second is th right motor speed/direction. This allows you to move a motor forward and backward ranging all speeds. 100% moves each motor in the forward direction or left motor CCW and right motor CW. -100% moves each motor in the backwards direction or left motor CW and right motor CCW. 0 is neutral position.
+
 `forward(int,int);`
 `reverse(int,int);`
 `left(int,int);`
 `right(int,int);`
+The forward, reverse, left, and right all range from 0-100 percent in the left and right motors. Directions are preset per function so you just need to give each motor a speed.
 
-The stop function writes the GPIO low to ensure that no signal is being sent to the motors.
 `stop();`
+The stop function writes the GPIO low to ensure that no signal is being sent to the motors.
 
-The neutral function sends a 0 analog signal or 1500 μs pulse to each motor
 `neutral();`
+The neutral function sends a 0 analog signal or 1500 μs pulse to each motor
