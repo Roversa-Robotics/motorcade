@@ -3,9 +3,9 @@
 
 extern MicroBit uBit;
 
-const int stop_us=1500;
-const int min_us=700;
-const int max_us=2300;
+const int stop_us = 1500;
+const int min_us = 700;
+const int max_us = 2300;
 const int frequency = 50;
 const int period = 1000000 / frequency;
 
