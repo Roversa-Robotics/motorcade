@@ -6,7 +6,7 @@ extern MicroBit uBit;
 Feetech FS90R servo motor parameters
 Range: 700μs - 2300μs, neutral at 1500μs, and a frequency of 50Hz
 Left motor on microbit pin 1
-Right motor ob microbit pin 2
+Right motor on microbit pin 2
 */
 const int stop_us = 1500;
 const int min_us = 700;
