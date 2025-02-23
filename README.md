@@ -41,10 +41,13 @@ The drive function ranges from -100 to 100 percent to control direction and spee
 `reverse(int,int);`
 `left(int,int);`
 `right(int,int);`
-The forward, reverse, left, and right all range from 0-100 percent in the left and right motors. Directions are preset per function so you just need to give each motor a speed.
+
+The forward, reverse, left, and right all range from 0-100 percent in the left and right motors. Directions are preset per function so you just need to give each motor a speed. Enter left motor then right motor in parameters.
 
 `stop();`
+
 The stop function writes the GPIO low to ensure that no signal is being sent to the motors.
 
 `neutral();`
+
 The neutral function sends a 0 analog signal or 1500 μs pulse to each motor
