@@ -45,5 +45,5 @@ The forward, reverse, left, and right all range from 0-100 percent in the left a
 The stop function writes the GPIO low to ensure that no signal is being sent to the motors.
 `stop();`
 
-The neutral function sends a 0 analog or 1500 μs pulse to each motor
-`neutral(int,int);`
+The neutral function sends a 0 analog signal or 1500 μs pulse to each motor
+`neutral();`
